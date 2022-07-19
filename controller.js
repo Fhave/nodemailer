@@ -52,8 +52,8 @@ exports.sendContact =  async (req, res) => {
 
     // Mail Options
     let mailOptions = {
-      from: process.env.MAIL_USERNAME,
-      to: `${req.body.email}`,
+      from: 'omosiyobo@gmail.com', //Sender address
+      to: 'omosiyobo@gmail.com', // Receiver address
       subject: 'Nodemailer Project',
       text: 'Hi from your nodemailer project',
       html: mail
