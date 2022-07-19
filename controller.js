@@ -50,7 +50,7 @@ exports.sendContact =  async (req, res) => {
       }
     });
 
-    // Mail Options
+    // Mail Options To Website Owner
     let mailOptions = {
       from: 'omosiyobo@gmail.com', //Sender address
       to: 'omosiyobo@gmail.com', // Receiver address
@@ -60,6 +60,24 @@ exports.sendContact =  async (req, res) => {
     };
 
     transporter.sendMail(mailOptions, function(err, data) {
+      if (err) {
+        console.log("Error: " + err);
+      } else {
+        console.log("Email sent successfully");
+        console.log(data);
+      }
+    });
+
+     // Mail Options To Website User
+     let mailOptions2 = {
+      from: 'omosiyobo@gmail.com', //Sender address
+      to: `${req.body.email}`, // Receiver address
+      subject: 'Nodemailer Project',
+      text: 'Hi from your nodemailer project',
+      html: `<h4>Your Message Has Been Received</h4>`
+    };
+
+    transporter.sendMail(mailOptions2, function(err, data) {
       if (err) {
         console.log("Error: " + err);
       } else {

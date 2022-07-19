@@ -6,7 +6,7 @@ Content-Type: application/json
 
 { 
   "name": "Omoruyi Iyobosa", 
-  "email": "omosiyobo@gmail.com", 
+  "email": "omoruyiiyobosa@yahoo.com", 
   "phone": "08030657191", 
   "message": "Node Js Project to Send Emails using Nodemailer."
 }
